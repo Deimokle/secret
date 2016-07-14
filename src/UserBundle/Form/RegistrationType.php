@@ -4,6 +4,8 @@ namespace UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class RegistrationType extends AbstractType
 {
@@ -15,7 +17,15 @@ class RegistrationType extends AbstractType
                 ->add('age', 'datetime')
                 ->add('dteCreation', 'datetime')
                 ->add('pays')
-                ->add('genre')
+                ->add('genre', ChoiceType::class, array(
+                'choices' => array(
+                    'm' => 'Homme',
+                    'f' => 'Femme'
+                ),
+                'required'    => false,
+                'placeholder' => 'Sexe',
+                'empty_data'  => null
+            ))
         ;
     }
 
