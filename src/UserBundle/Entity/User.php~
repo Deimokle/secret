@@ -1,0 +1,47 @@
+<?php
+
+namespace UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ */
+class User
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $nom;
+
+    /**
+     * @var string
+     */
+    private $prenom;
+
+    /**
+     * @var \DateTime
+     */
+    private $age;
+
+    /**
+     * @var \DateTime
+     */
+    private $dteCreation;
+
+    /**
+     * @var array
+     */
+    private $pays;
+
+    /**
+     * @var array
+     */
+    private $genre;
+
+}
